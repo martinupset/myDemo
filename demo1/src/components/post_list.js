@@ -9,7 +9,7 @@ class PostList extends Component{
   }
 
   componentDidMount(){
-    loadPosts()
+    this.props.dispatch(loadPosts)
   }
 
   render(){
@@ -32,8 +32,8 @@ const mapStateToProps = (state) => {
   }
 }
 
-const mapDispatchToProps = {
-  loadPosts
-}
+// const mapDispatchToProps = {
+//   loadPosts
+// }
 //组件和rudux
-export default connect(mapStateToProps, mapDispatchToProps)(PostList);
+export default connect(mapStateToProps)(PostList);
